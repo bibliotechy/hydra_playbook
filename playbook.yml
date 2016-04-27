@@ -1,0 +1,30 @@
+---
+
+- name: Ensure that the app user exists
+  hosts: tul_ohist
+  tasks:
+    - user: name={{app_user}} state=present
+      become: yes
+
+
+- name: Setup rbenv
+  hosts: tul_ohist
+  become: yes
+  roles: 
+    - { role: zzet.rbenv, rbenv_users: "{{app_user}}" }
+
+
+- name: Install apache and passenger
+  hosts: tul_ohist
+  become: yes
+  roles:
+    - role: geerlingguy.apache
+    - role: ansible_passenger-apache
+
+- name: Deploy the rails app
+  hosts: tul_ohist
+  become: yes
+  roles:
+    - role: ansible_deploy-hydra-app
+  tags:
+    - rails

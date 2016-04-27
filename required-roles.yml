@@ -1,0 +1,17 @@
+---
+
+# Remote roles required to run this playbook.
+
+
+- src: geerlingguy.apache
+  path: external_roles/
+
+- src: zzet.rbenv
+  path: external_roles/
+
+- src: https://github.com/tulibraries/ansible_passenger-apache.git
+  path: external_roles/
+
+
+- src: https://github.com/tulibraries/ansible_deploy-hydra-app.git
+  path: external_roles/

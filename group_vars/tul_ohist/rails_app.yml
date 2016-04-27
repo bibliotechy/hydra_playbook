@@ -1,0 +1,28 @@
+---
+
+rails_app_name: tul_ohist
+rails_app_git_url: https://github.com/tulibraries/tul_ohist.git
+rails_app_git_branch: deployable
+
+rails_app_ruby_path: /home/{{ app_user }}/.rbenv/versions/{{ rbenv.ruby_version}}
+
+rails_app_bundle_exe: "{{rails_app_ruby_path}}/bin/bundle"
+rails_app_gem_path: "{{rails_app_ruby_path}}/lib/ruby/gems"
+
+rails_app_url_base_path: /oralhistories
+
+jetty_hostname: 127.0.0.1
+jetty_port: 8993
+
+
+cdm_server: "https://server16002.contentdm.oclc.org"
+cdm_archive: "http://digital.library.temple.edu/"
+cdm_xpath: "/collections/collection/alias/text()"
+cdm_download_dir: "tmp/cdm_tul/downloads"
+cdm_foxml_dir: "tmp/cdm_tul/foxml"
+tul_cdm_organization_url: "http://library.temple.edu"
+
+
+rails_app_specific_config_files:
+  - contentdm.yml
+  - backups.yml

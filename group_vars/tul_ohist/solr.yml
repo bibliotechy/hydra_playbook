@@ -1,0 +1,4 @@
+---
+
+solr_url: "{{ jetty_hostname }}"
+solr_port: "{{ jetty_port }}"

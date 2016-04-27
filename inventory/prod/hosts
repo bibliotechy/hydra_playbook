@@ -1,0 +1,5 @@
+[tul_cdm]
+libqa.library.temple.edu ansible_user=tug34268 ansible_private_key_file=keys/tul_deploy
+
+[all:children]
+tul_cdm

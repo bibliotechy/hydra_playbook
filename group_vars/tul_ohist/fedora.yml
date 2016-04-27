@@ -1,0 +1,4 @@
+---
+
+fedora_hostname: "{{ jetty_hostname }}"
+fedora_port: "{{ jetty_port }}"
